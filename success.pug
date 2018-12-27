@@ -1,0 +1,18 @@
+extends app layout
+block content
+    div.container
+        div.centerDiv
+            span.bold 정상 처리 되었습니다.
+            if(phone!=undefined)
+                div
+                    p
+                    span.lightpink 내용 검토 후에 시스템에 등재될 예정 입니다.
+                        br/ 등재 결과 확인은 수일이 소요될 수 있습니다.
+                    p
+                    a(href='/am?'+phone)
+                        button 추가 작성(남)
+                    a(href='/ad?' + phone)
+                        button 추가 작성(여)
+                    form(action='/login' method='post')
+                        input(type='hidden' name='phone' value=phone)
+                        input(type='submit' value='수단목록으로 이동' id='backList')

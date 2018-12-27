@@ -1,0 +1,75 @@
+extends app layout
+block content
+    script(src='js/search.js' type="text/javascript")
+    if(json!=undefined && json.man.length==0)
+        script.
+            alert('검색된 자료가 없습니다.')
+
+    div.container
+        form.search-form(action="/search" method="get")
+            span 보명
+            input.search-input(type="text" name="name" value=name)
+            span 부
+            input.search-input(type="text" name="dad" value=dad)
+            span 조부
+            input.search-input(type="text" name="grd" value=grd)
+            input(type="submit" value="검색")
+            span.lightpink ← 성씨는 제외하고 입력하십시오
+        div
+            table.search-table
+                tr
+                    td
+                        span.search-frame
+                            span.title
+                                span.line 세
+                                span 보명
+                                span 부
+                                span 조부
+                                span 문중
+                            span(id="list").list
+                                if(json != null)
+                                    each m in json.man
+                                        if(json.searched.includes(m.id))
+                                            a.list-item(href='#' onclick="listItemClick(name);activeCntl(this);return false;" name=m.id)
+                                                span.line=m.line
+                                                span=m.name + "(" + m.kor + ")"
+                                                each dad in json.man
+                                                    if(m.dad == dad.id)
+                                                        span=dad.name + "(" + dad.kor + ")"
+                                                        each gdad in json.man
+                                                            if(dad.dad == gdad.id)
+                                                                span=gdad.name + "(" + gdad.kor + ")"
+                                                each c in json.clan
+                                                    if(m.clan == c.root_id)
+                                                        span=c.name
+                    td.btn
+                        span.button-frame
+                            span.line-title
+                                span 淵源世系圖
+                            span.line-cont
+                                span.panel-frame#pf
+                                    span.panel(id="panel")
+                                    div.rect#point
+                                span.number(id="number")
+                                    span
+                                        p(id="no0") 曾
+                                    span
+                                        p(id="no1") 祖
+                                    span
+                                        p(id="no2") 父
+                                    span
+                                        p(id="no3") 當
+                                    span
+                                        p(id="no4") 子
+            table(id='info').info-table
+                tr.wide
+                    th.head 杏山
+                    td(id="line" colspan=4).xwide
+            table(id='wife').info-table
+                tr
+                    th.head 配位
+                    td.wide
+            table(id='dt').info-table.last
+                tr
+                    th.head 女壻
+                    td.wide

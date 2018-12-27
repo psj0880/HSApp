@@ -1,0 +1,686 @@
+@font-face {
+    font-family: 나눔고딕;
+    src:url(/fonts/NanumGothic.eot);
+    src:url(/fonts/NanumGothic.eot?#iefix) format('embedded-opentype'),
+        url(/fonts/NanumGothic.ttf) format('truetype');
+}
+
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 나눔고딕;
+    margin: 0;
+}
+
+div.logo{
+    display: block;
+    width: 1280px;
+    margin: auto;
+}
+div.logo img{
+    margin: 15px;
+    width: 180px;
+}
+div.logo img.large{
+     margin: 10px;
+     width: 940px;
+ }
+
+.h{
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.h1{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+.h1 span{
+    font-size: 16px;
+}
+.h2{
+    display: block;
+    text-align: center;
+    font-size: 15px;
+}
+.footer {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    flex-shrink: 0;
+    background: white;
+    text-align: center;
+    z-index: 2;
+}
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+.container-sm {
+    width: 640px;
+    margin: 0 auto;
+}
+.wrap{
+    flex: 1 0 auto;
+    margin-top: 50px;
+}
+.bottom{
+    height: 80px;
+    display: flex;
+}
+.nav-wrap{
+    position: absolute;
+    top: 120px;
+    min-width: 1280px;
+    width: 100%;
+    border-bottom: 1px #e0e0e0 solid;
+    border-top: 1px #e0e0e0 solid;
+}
+.navigation{
+    width: 1280px;
+    background: white;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 1;
+    border-left: 1px #e0e0e0 solid;
+    border-right: 1px #e0e0e0 solid;
+}
+.navigation ul{
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.navigation a{
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+    color: #000;
+    text-align: center;
+    width: 100%;
+}
+.navigation > ul{
+    text-align: right;
+}
+.navigation > ul > li > a{
+    font-size: 20px;
+    line-height: 50px;
+}
+.navigation > ul > li{
+    display: inline-block;
+    width: 130px;
+    height: 100%;
+}
+.navigation > ul > li.active > a{
+    background: #f9f9f9;
+    color: green;
+ }
+.navigation .d2{
+    background: #f9f9f9;
+    box-sizing: border-box;
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    transition: .5s ease;
+    width: 130px;
+    border: 1px #e0e0e0 solid;
+    border-top: 0;
+}
+.navigation .d2 > li > a{
+    line-height: 30px;
+}
+.navigation .d2 > h5{
+    margin: 10px;
+    text-align: center;
+}
+.navigation .d1 ul > li:hover > a{
+    background: green;
+    color: white;
+}
+.navigation > ul > li:hover > a{
+    background: #f9f9f9;
+    color: green;
+}
+.d1:hover .d2 {
+    visibility: visible;
+    height: 4em;
+}
+
+form.search-form input{
+    margin: 5px;
+    margin-right: 20px;
+    width: 90px;
+    font-size: 15px;
+}
+form.search-form input:last-child{
+    margin-left: 17px;
+}
+table.search-table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table.search-table td{
+    padding: 0;
+}
+table.search-table td.btn{
+    width: 100%;
+    height: 100%;
+}
+table.search-table span.search-frame{
+    height: 310px;
+    width: 537px;
+    background: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+table.search-table span.search-frame span.list{
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 281px;
+}
+table.search-table span.search-frame a.list-item{
+    display: block;
+    width: 520px;
+    text-decoration: none;
+    color: black;
+}
+table.search-table span.search-frame.search-frame a.list-item:hover{
+    background: #b7d5ac;
+    color: #000000;
+}
+table.search-table span.search-frame a.list-item span{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    overflow: hidden;
+}
+table.search-table span.search-frame a.list-item span.line{
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+table.search-table span.search-frame a.list-item.active{
+    background: #0f6a08;
+    color: white;
+}
+table.search-table span.search-frame span.title{
+    display: block;
+    background: #f3f3f3;
+}
+table.search-table span.search-frame span.title span{
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    border-right: 1px solid #ffffff;
+}
+table.search-table span.search-frame span.title span:last-child{
+    border-right: none;
+}
+table.search-table span.search-frame span.title span.line{
+    width: 40px;
+}
+table.search-table span.button-frame span.number{
+    display: inline-block;
+    width: 30px;
+    height: 280px;
+    border-left: 1px solid black;
+    vertical-align: top;
+}
+table.search-table span.button-frame span.number span{
+    display: block;
+    height: 52px;
+    text-align: center;
+}
+table.search-table span.button-frame span.number p{
+    margin: 0;
+    line-height: 50px;
+}
+table.search-table span.button-frame{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 310px;
+}
+table.search-table span.button-frame span.line-title {
+    display: block;
+    box-sizing: border-box;
+    background: #f3f3f3;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+table.search-table span.button-frame span.line-cont {
+    display: block;
+    box-sizing: border-box;
+    height: 280px;
+    width: 100%;
+    text-align: right;
+}
+table.search-table span.button-frame span.panel-frame {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 709px;
+    overflow-x: scroll;
+}
+table.search-table span.button-frame span.panel {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+table.search-table span.button-frame span.panel button{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 3px;
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #aaaaaa;
+    cursor: pointer;
+}
+table.search-table span.button-frame span.panel button.highlight{
+    font-weight: bold;
+    color: #ddaa00;
+}
+table.search-table span.button-frame span.panel button.gray{
+    color: #d9d9d9;
+}
+table.search-table span.button-frame span.panel button:hover{
+     background-color: #C6CCD2;
+ }
+table.search-table span.button-frame span.panel button span{
+    display: inline-block;
+    height: 43px;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+}
+table.search-table span.button-frame div.rect{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background: #ddeedd;
+    height: 50px;
+    top:156px;
+}
+
+div.centerDiv{
+    width: 1280px;
+    height: 450px;
+    text-align: center;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+div.centerDiv div.info{
+    margin-bottom: 40px;
+}
+div.centerDiv>table{
+    margin: auto;
+}
+div.centerDiv div.box{
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    width: 470px;
+}
+div.centerDiv input{
+    font-size: 15px;
+    margin: 5px;
+}
+div.centerDiv button{
+    font-size: 15px;
+}
+div.centerDiv input.phone{
+    width: 220px;
+ }
+div.centerDiv a{
+    display: inline-block;
+    margin: 5px;
+}
+span.app-list-frame{
+    width: auto;
+    display: inline-block;
+    font-size: 16px;
+}
+span.app-list-frame a.list-item{
+     display: table;
+     width: 470px;
+     text-decoration: none;
+     color: black;
+ }
+span.app-list-frame a.list-item span{
+    display: table-cell;
+    vertical-align: middle;
+}
+span.app-list-frame a.list-item button{
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: 15px;
+    padding: 0 1px;
+}
+span.app-list-frame a.list-item span{
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #c0c0c0;
+}
+span.app-list-frame a.list-item:hover span{
+    background: #e0e0e0;
+}
+
+span.title-img{
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+table.table{
+    border-collapse: collapse;
+    width: 1280px;
+    text-align: center;
+}
+table.table thead th{
+    padding: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+table.table tbody th{
+    padding: 10px;
+    font-weight: normal;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cccccc;
+    min-width: 90px;
+}
+table.table tbody tr.head th{
+    padding: 10px;
+    background: #f3f3f3;
+    border-bottom: 3px solid #c0c0c0;
+}
+table.table tbody tr.head th.remark{
+    width: 180px;
+}
+table.table tbody td.remark{
+    text-align: right;
+}
+table.table td{
+    min-width: 40px;
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+table.table td.input{
+    padding: 5px;
+    width: 110px;
+    border-bottom: 1px solid #cccccc;
+}
+table.table td.headInput{
+    padding: 5px;
+    width: 260px;
+    border-bottom: 1px solid #cccccc;
+}
+table.table td.headInput input{
+    box-sizing: border-box;
+    font-size: 15px;
+    width: 100%;
+ }
+table.table td.tel{
+    text-align: left;
+    padding: 0px;
+}
+table.table td.tel span{
+    padding: 10px;
+}
+table.table td.tel span.input{
+    display: inline-block;
+    padding: 5px;
+    width: 169.9px;
+}
+table.table td.tel span.input input{
+    color: #0000ff;
+    box-sizing: border-box;
+    font-size: 15px;
+    width: 100%;
+}
+table.table td.new{
+    position: relative;
+    text-align: right;
+    padding-right: 120px;
+}
+table.table td.new img{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 80px;
+ }
+table.table td.input input{
+    color: #0000ff;
+    box-sizing: border-box;
+    font-size: 15px;
+    width: 100%;
+}
+table.table td.input select{
+    color: #0000ff;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 0 5px;
+}
+table.table td.input textarea{
+    box-sizing: border-box;
+    font-size: 15px;
+    width: 100%;
+    height: 80px;
+    resize: none;
+}
+table.table td.input-left{
+    text-align: left;
+    padding: 5px;
+}
+table.table td.input-left input{
+    color: #0000ff;
+    box-sizing: border-box;
+    font-size: 15px;
+    width: 101px;
+}
+table.table td.input-left select{
+    color: #0000ff;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+table.table td.date{
+    text-align: left;
+    padding: 5px;
+}
+table.table td.date span{
+    margin-right: 10px;
+}
+table.table td.date input{
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 15px;
+}
+table.table td.date select{
+    color: #0000ff;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+table.table td.date select.king{
+    width: 95px;
+}
+table.table td.date select.year{
+    width: 110px;
+}
+table.table input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+table.table td.result{
+    position: relative;
+    border-left: 1px solid #cccccc;
+    text-align: left;
+    width: 500px;
+    word-break: break-all;
+    margin: 5px;
+    color: #2222ff;
+}
+table.table td.gray{
+    background: #f3f3f3;
+    border-right: 1px solid #cccccc;
+    padding: 5px;
+    width: 50px;
+}
+div.submit{
+    text-align: right;
+    width: 810px;
+}
+div.submit input{
+    margin: 5px;
+    font-size: 15px;
+}
+div.submit button{
+    font-size: 15px;
+}
+table.guid{
+    border-collapse: collapse;
+    width: 1280px;
+}
+table.guid thead th{
+    border-top: #808080 solid 3px;
+    background: #cccccc;
+    padding: 10px;
+    font-weight: normal;
+}
+table.guid tbody tr {
+    border-bottom: #cccccc solid 1px;
+}
+table.guid tbody td {
+    border-left: #cccccc solid 1px;
+    vertical-align: top;
+    padding: 5px;
+}
+table.guid tbody td.head {
+    border-left: none;
+    text-align: center;
+    min-width: 50px;
+}
+table.guid tbody td.wide {
+    text-align: center;
+    width: 700px;
+    vertical-align: inherit;
+}
+table.guid tbody td.cntr {
+    border-left: none;
+    text-align: center;
+    min-width: 50px;
+    vertical-align: inherit;
+}
+table.guid tbody td.mid {
+    width: 970px;
+}
+table.guid tbody td.end {
+    width: 231px;
+}
+
+table.info-table{
+    display: inline-block;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 20px;
+    vertical-align: top;
+}
+table.info-table.last{
+     margin-right: 0;
+ }
+table.info-table .head{
+    background: #f3f3f3;
+    width: 45px;
+    text-align: center;
+}
+table.info-table tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.info-table tr.first{
+    border-top: 3px solid #999999;
+}
+table.info-table tr.last{
+    border-bottom: none;
+    margin: 10px;
+}
+table.info-table td{
+    box-sizing: border-box;
+    padding: 5px;
+    height: 30px;
+    width: 214px;
+}
+table.info-table td.name{
+    width: 107px;
+}
+table.info-table td.wide{
+    width: 310px;
+}
+table.info-table td.xwide{
+    width: 473px;
+}
+
+table.mail{
+    width: 100%;
+}
+table.mail td.center{
+    text-align: center;
+}
+table.mail td.margin{
+    width: 150px;
+}
+
+table.list-table td{
+    vertical-align: top;
+}
+
+div.login input{
+    box-sizing: border-box;
+    margin: 2px;
+    font-size: 15px;
+    height: 26px;
+}
+
+#backList{
+    width: 220px;
+}
+.blue{
+    color: #0000ff;
+}
+.red{
+    color: #ff0000;
+}
+.lightpink{
+    color: lightpink;
+}
+.green,
+.green:visited{
+    color: #009000;
+}
+.bold{
+    font-weight: bold;
+}
+.underline{
+    text-decoration: underline;
+}

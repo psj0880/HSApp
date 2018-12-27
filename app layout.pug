@@ -1,0 +1,54 @@
+doctype html
+html
+    head
+        title 행산원
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+        meta(name='robots', content='all')
+        meta(name='naver-site-verification', content='909d98d1144f5898db0f3aefbf59abf27581bfe0')
+        meta(name='description', content='행산원-밀성박씨충정공밀성부원군 행산공파의 문중홈페이지이며 문중 정보들을 관리하는 사설기관입니다')
+        meta(name='keywords', content='행산원, 밀성박씨충정공밀성부원군, 문중')
+        meta(name='author', content='행산원')
+        meta(property='og:title', content='행산원')
+        meta(property='og:description', content='행산원-밀성박씨충정공밀성부원군 행산공파의 문중홈페이지이며 문중 정보들을 관리하는 사설기관입니다')
+        meta(property='og:url', content='http://hengsan.co.kr')
+        link(rel='canonical', href='http://hengsan.co.kr')
+        link(rel='stylesheet', href='css/appcst.css')
+        link(rel='stylesheet', href='css/popup.css')
+    body
+        div.modal(id="modal")
+            div.modal-content
+                h1.center 공지사항
+                div.bold [당부말씀]
+                    p
+                div 본 사이트는 영리단체가 아닌 순수 종사지원 목적의 사설운영 기관입니다.
+                    br/br/ 사이트 이용 시 다소 불편한 사항이 있으시더라도 무례한 언사나 과도한 요구 등을 삼가 해 주시고,
+                    br/ 친절하게 문의해 주시면 성심을 다해 안내 및 조치해 드리겠습니다.
+                    br/br/ 감사합니다.  -  杏山大同情報院
+                    br/br/
+                input(type='checkbox' id='chbox')
+                label 오늘 하루 동안 보지 않기
+                button.close(id='close') 닫기
+        script(src='js/popup.js')
+        div.top
+            div.logo
+                a(href='/')
+                    img(src='img/logo.png')
+                span
+                    img.large(src='img/sub.png')
+            div.nav-wrap
+                nav.navigation
+                    ul
+                        li(class= (no==1 ? " active" : ""))
+                            a(href="/" role='button' aria-expanded='false') 수보안내
+                        li(class= (no==2 ? " active" : ""))
+                            a(href='search' aria-expanded='false') 연원검색
+                        li(class= (no==3 ? " active" : ""))
+                            a(href='applogin' aria-expanded='false') 전자수단
+                        li(class= (no==4 ? " active" : ""))
+                            a(href="mail" role='button' aria-expanded='false') 메일수단
+        div.wrap
+            block content
+        div.footer
+            p 주소 : 경남 거제시 아주로74 해와루 106-606, 우편번호 : 53305
+            p Tel : 055-731-1206 &nbsp;&nbsp;&nbsp; Fax : 055-731-1214
+

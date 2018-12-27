@@ -1,0 +1,84 @@
+extends app layout
+block content
+    script(src='js/login.js')
+    div.container-sm
+        span.title-img
+            img(src='img/mail_logo.png' width=300)
+        p 아래의 세보수단 양식 중 본인에게 적합한 양식을 다운로드 하여 컴퓨터 또는 수기로 작성하신 후&nbsp;
+            span.bold 이메일
+            span 이나&nbsp;
+            span.bold 우편
+            span 으로 송부하시면 됩니다.
+        p 이메일주소 : sudan@hengsan.co.kr
+        table.mail
+            tr
+                th.center.underline(colspan=2) 수단지(남)
+                td.margin
+                th.center.underline(colspan=2) 수단지(여)
+            tr
+                td
+                    a(href='/download/收單紙_男子.xlsx' target="_blank") 收單紙_男子.xlsx
+                td
+                    a(href='/download/收單紙_男子.xlsx' download)
+                        button 다운로드
+                td
+                td
+                    a(href='/download/收單紙_女壻.xlsx' download) 收單紙_女壻.xlsx
+                td
+                    a(href='/download/收單紙_女壻.xlsx' download)
+                        button 다운로드
+            tr
+                td
+                    a(href='/download/收單紙_男子.hwp' target="_blank") 收單紙_男子.hwp
+                td
+                    a(href='/download/收單紙_男子.hwp' download)
+                        button 다운로드
+                td
+                td
+                    a(href='/download/收單紙_女壻.hwp' download) 收單紙_女壻.hwp
+                td
+                    a(href='/download/收單紙_女壻.hwp' download)
+                        button 다운로드
+            tr
+                td
+                    a(href='/download/收單紙_男子.pdf' target="_blank") 收單紙_男子.pdf
+                td
+                    a(href='/download/收單紙_男子.pdf' download)
+                        button 다운로드
+                td
+                td
+                    a(href='/download/收單紙_女壻.pdf' download) 收單紙_女壻.pdf
+                td
+                    a(href='/download/收單紙_女壻.pdf' download)
+                        button 다운로드
+            tr
+                td
+                    a(href='/download/收單紙_男子.jpg' target="_blank") 收單紙_男子.jpg
+                td
+                    a(href='/download/收單紙_男子.jpg' download)
+                        button 다운로드
+                td
+                td
+                    a(href='/download/收單紙_女壻.jpg' download) 收單紙_女壻.jpg
+                td
+                    a(href='/download/收單紙_女壻.jpg' download)
+                        button 다운로드
+            tr
+                td
+                    p
+            tr
+                td
+                    p
+            tr
+                td
+                    p
+            tr
+                th.center.underline(colspan=2) 작성예(남)
+                td.margin
+                th.center.underline(colspan=2) 작성예(여)
+            tr
+                td(colspan=2).center
+                    a(href='/download/작성예_男子.jpg' target='_blank') 수단작성예시_男子
+                td
+                td(colspan=2).center
+                    a(href='/download/작성예_女壻.jpg' target='_blank') 수단작성예시_女壻

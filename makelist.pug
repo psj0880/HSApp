@@ -1,0 +1,39 @@
+td
+    div.box
+        span.app-list-frame
+            if(man != null)
+                if(man.length > 0)
+                    div(id="list")
+                        each app in man
+                            span
+                                a.list-item(href='/am?id=' + app._id)
+                                    -var name=app.body.ggrd + "(" + app.body.ggrd_kor + ")_"+app.body.grd + "(" + app.body.grd_kor + ")_"+app.body.dad + "(" + app.body.dad_kor + ")_"
+                                    if(app.body.fdad != '')
+                                        -name+=app.body.fdad + "(" + app.body.fdad_kor + ")_"
+                                    -name+=app.body.name + "(" + app.body.kor + ")"
+                                    span=name
+                                    button(onclick='delman("' + app._id + '","' + name + '",this); return false;') 삭제
+                else
+                    div 조회된 자료가 없습니다.
+        div
+            a(href='/am?phone='+phone)
+                button 신규/추가 작성
+td
+    div.box
+        span.app-list-frame
+            if(dt != null)
+                if(dt.length > 0)
+                    div(id="list")
+                        each app in dt
+                            a.list-item(href='/ad?id=' + app._id)
+                                -var name=app.body.ggrd + "(" + app.body.ggrd_kor + ")_"+app.body.grd + "(" + app.body.grd_kor + ")_"+app.body.dad + "(" + app.body.dad_kor + ")_"
+                                if(app.body.fdad != '')
+                                    -name+=app.body.fdad + "(" + app.body.fdad_kor + ")_"
+                                -name+=app.body.name + "(" + app.body.kor + ")"
+                                span=name
+                                button(onclick='deldt("' + app._id + '","' + name + '",this); return false;') 삭제
+                else
+                    div 조회된 자료가 없습니다.
+        div
+            a(href='/ad?phone='+phone)
+                button 신규/추가 작성

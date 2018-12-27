@@ -1,0 +1,15 @@
+extends app layout
+block content
+    script(src='js/login.js')
+    div.container
+        span.title-img
+            img(src='img/login_logo.png' width=300)
+            form(method="post" action='/login' onsubmit='return pNumCheck()')
+                div.login
+                    br/ &nbsp;
+                    div 본인 확인을 위한 정보이므로 정확히 입력해 주세요.
+                        br/ &nbsp;
+                    span 핸드폰번호
+                    input.phone(name='phone' type=text placeholder='ex)01012345678' autofocus)
+                    input(type="submit" value='확인')
+                    div "-"를 제외한 숫자만 입력해 주세요.

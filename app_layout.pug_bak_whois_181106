@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        title HS
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+        link(rel='stylesheet', href='css/appcst.css')
+    body
+        div.top
+            div.logo
+                a(href='/')
+                    img(src='img/logo.png')
+                span
+                    img.large(src='img/sub.png')
+            div.nav-wrap
+                nav.navigation
+                    ul
+                        li(class= (no==1 ? " active" : ""))
+                            a(href="/" role='button' aria-expanded='false') 수보안내
+                        li(class= (no==2 ? " active" : ""))
+                            a(href='search' aria-expanded='false') 연원검색
+                        li(class= (no==3 ? " active" : ""))
+                            a(href='applogin' aria-expanded='false') 전자수단
+                        li(class= (no==4 ? " active" : ""))
+                            a(href="mail" role='button' aria-expanded='false') 메일수단
+        div.wrap
+            block content
+        div.footer
+            p 주소 : 경남 거제시 아주로74 해와루 106-606, 우편번호 : 53305
+            p Tel : +82 55-731-1206 &nbsp; Fax : +82 55-731-1214
+

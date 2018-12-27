@@ -1,0 +1,38 @@
+extends app layout
+block content
+    script.
+        $(window).bind("pageshow", function (event) {
+            $.post("/listup", {phone: '#{phone}'}, function (result) {
+                $("#list").html(result);
+            })
+        });
+        function delman(id, name, el) {
+            if (confirm('"' + name + '" 항목을 삭제 하시겠습니까?') == true)
+                $.post("/delman", {id: id}, function (result) {
+                    if (result == '1')
+                        $(el).parent().remove();
+                    else
+                        alert('삭제 중 오류가 발생했습니다.');
+                });
+        }
+        function deldt(id, name, el) {
+            if (confirm('"' + name + '" 항목을 삭제 하시겠습니까?') == true)
+                $.post("/deldt", {id: id}, function (result) {
+                    if (result == '1')
+                        $(el).parent().remove();
+                    else
+                        alert('삭제 중 오류가 발생했습니다.');
+                });
+        }
+    div.container
+        div.centerDiv
+            div.info
+                span.blue='"'+phone+'"'
+                span &nbsp;님께서 작성하신 수단자료 목록 입니다.
+            table.list-table
+                tr
+                    td
+                        img(src='/img/man.png' width=60)
+                    td
+                        img(src='/img/dt.png' width=60)
+                tr(id='list')

@@ -1,0 +1,151 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "맑은 고딕";
+    margin: 0;
+}
+.footer {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    flex-shrink: 0;
+    background: white;
+    text-align: center;
+    z-index: 2;
+}
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+.container-sm {
+    width: 640px;
+    margin: 0 auto;
+}
+.wrap{
+    flex: 1 0 auto;
+    padding-top: 140px;
+}
+.bottom{
+    height: 80px;
+    display: flex;
+}
+.right{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.flex-end{
+    align-self: flex-end;
+}
+.height200{
+    height: 200px;
+}
+.right-line{
+    border-right: 1px solid #f1f1f1;
+    min-height: 758px;
+}
+.width100{
+    width: 100%;
+}
+.bottom-img{
+    height: 450px;
+    position: relative;
+}
+.bottom-img img{
+    position: absolute;
+    bottom: 0px;
+}
+.input{
+    font-size: 20px;
+    margin: 0 10px;
+}
+.inputRow{
+    padding: 5px;
+}
+.sub1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sub2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.nav-wrap{
+    position: absolute;
+    top: 90px;
+    min-width: 1280px;
+    width: 100%;
+    border-bottom: 1px #e0e0e0 solid;
+    border-top: 1px #e0e0e0 solid;
+}
+.navigation{
+    position: relative;
+    width: 1280px;
+    display: block;
+    background: white;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 1;
+}
+.navigation ul{
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.navigation a{
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+    color: #000;
+    text-align: center;
+    width: 100%;
+}
+.navigation .d1{
+    width: 1280px;
+    border-left: 1px #e0e0e0 solid;
+    border-right: 1px #e0e0e0 solid;
+}
+.navigation .d1 > li > a{
+    font-size: 25px;
+    line-height: 50px;
+}
+.navigation .d2{
+    visibility: hidden;
+    height: 0;
+    transition: .5s ease;
+}
+.navigation .d2 > li > a{
+    line-height: 30px;
+}
+.navigation .d1 > li{
+    float: left;
+    display: list-item;
+    width: 12.5%;
+    height: 100%;
+}
+.navigation .d2 > h5{
+    margin: 10px;
+    text-align: center;
+}
+.navigation .d1 ul > li:hover > a{
+    background: red;
+    color: white;
+}
+.navigation .d1 > li:hover{
+    background: #f9f9f9;
+}
+.navigation .d1 > li:hover > a{
+    color: red;
+}
+.d1:hover .d2 {
+    visibility: visible;
+    height: 30em;
+}
